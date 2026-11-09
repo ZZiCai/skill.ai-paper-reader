@@ -1,6 +1,6 @@
 # ai-paper-reader：AI 论文精读 Skill
 
-一个用于 CodeBuddy Code 的论文精读技能。它把人工智能、机器学习、深度学习、大模型、NLP、CV、数据挖掘等领域的论文，整理成**可核验的中文 Markdown 精读文档**，而不是逐节复述原文。
+一个适用于各类 AI Agent 的论文精读技能。它把人工智能、机器学习、深度学习、大模型、NLP、CV、数据挖掘等领域的论文，整理成**可核验的中文 Markdown 精读文档**，而不是逐节复述原文。
 
 核心思路是抓住论文的**逻辑闭环**：
 
@@ -37,23 +37,25 @@
 
 ## 安装
 
-将本仓库克隆到 CodeBuddy Code 的用户级 skills 目录下（所有项目可用），目录名为 `ai-paper-reader`：
+将本仓库克隆到你所使用的 AI Agent 的 skills 目录下（具体位置请参考对应 Agent 的文档），目录名为 `ai-paper-reader`：
 
 ```bash
-git clone https://github.com/ZZiCai/skill.ai-paper-reader.git ~/.codebuddy/skills/ai-paper-reader
+git clone https://github.com/ZZiCai/skill.ai-paper-reader.git /path/to/skills/ai-paper-reader
 ```
 
-也可以只下载 `SKILL.md`，手动放到 `~/.codebuddy/skills/ai-paper-reader/SKILL.md`。安装后新开一个会话即可加载。
+也可以下载 `SKILL.md`，然后与所用 Agent 对话，让它完成安装。安装后按照其要求重新加载技能或新开会话。
 
 ## 使用
 
-上传论文 PDF、提供论文链接或题名，并提出“精读”“解读”“阅读笔记”“逻辑闭环”“创新点分析”等要求时会自动触发；也可以手动调用：
+如果论文 PDF在本地，可以直接
 
 ```text
-/ai-paper-reader 读论文 @paper/xxx.pdf
+/ai-paper-reader  @path/to/paper.pdf
 ```
 
-建议在首次使用前告诉 Agent 你的研究方向（例如“我的研究方向是反洗钱图学习”），并让它记入长期记忆，这样“对我的研究方向的启发”一节会更有针对性。
+提供**论文链接或题名**也可以，agent会自行搜索arxiv等学术资源仓库进行论文下载与阅读。
+
+建议在首次使用前告诉 Agent 你的研究方向（例如“我的研究方向是xxx”），并让它记入长期记忆，这样“对我的研究方向的启发”一节会更有针对性。
 
 ## 仓库结构
 
